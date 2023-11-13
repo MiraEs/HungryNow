@@ -70,9 +70,10 @@ Given the user doesn't have internet
  ### No connectivity - error course:
    1. System delivers connectivity error.
 
-------------
+--------------------
+[Cache use case - Extra]
 
-## Load Meal Feed from Cache Use Case (no connectivity)
+## Load Meal Feed from Cache Use Case (w/ connectivity):
 
 ### Primary course (happy path):
   1. Execute "Load Meal Feed" function with above data.
@@ -85,4 +86,36 @@ Given the user doesn't have internet
 
 ### Empty cache course:
   1. System delivers no feed images.
+
+## Validate Feed Cache Use Case
+### Data:
+* Meal Feed
+
+### Primary course (happy path):
+  1. Execute "Save Meal Feed" function with above data.
+  2. System deletes old cache data (determine time line for old data)
+  3. System encodes meal feed.
+  4. System timestamps the new cache.
+  5. System delivers success message.
+
+### Deleting error course:
+  1. System delivers error.
+
+### Saving error course:
+  1. System delivers error.
+
+---------
+
+## Cache Meal Feed Data Use Case
+### Data:
+* Meal DAta
+
+### Primary course (happy path):
+1. Execite "Save Meal Feed Data" function with above data.
+2. System caches meal data.
+3. System delivers success message.
+
+----------
+
+
   
