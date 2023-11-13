@@ -118,4 +118,38 @@ Given the user doesn't have internet
 ----------
 
 
+
+# Flowchart
+
+# Model Specs
+## Meal Feed Item
+
+| Property | Type |
+| -------- | ---- |
+| `name` | `String` (optional) |
+| `url` | `URL` (optional) |
+| `id` | `String` (optional) |
+
+
+## Payload contract
+
+```
+GET /themealdb.com/api/json/v1/1/filter.php?c=dessert
+
+200 RESPONSE
+
+{
+"meals": [
+  {
+  "strMeal": "Apam balik",
+  "strMealThumb": "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg",
+  "idMeal": "53049"
+  },
+]
+}
+```
+
+
+
+
   
