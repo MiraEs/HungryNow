@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4964A0512B028BB70010866F /* HungryNowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964A0502B028BB70010866F /* HungryNowApp.swift */; };
+		4964A0532B028BB70010866F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964A0522B028BB70010866F /* ContentView.swift */; };
+		4964A0552B028BB70010866F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964A0542B028BB70010866F /* Item.swift */; };
+		4964A0572B028BB90010866F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4964A0562B028BB90010866F /* Assets.xcassets */; };
+		4964A05B2B028BB90010866F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4964A05A2B028BB90010866F /* Preview Assets.xcassets */; };
+		4964A0652B028BB90010866F /* HungryNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964A0642B028BB90010866F /* HungryNowTests.swift */; };
+		49E80BB92B03CD2F00A0F168 /* MealFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E80BB82B03CD2E00A0F168 /* MealFeedItem.swift */; };
+		49E80BBB2B03CD9200A0F168 /* MealFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E80BBA2B03CD9200A0F168 /* MealFeedLoader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4964A0612B028BB90010866F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4964A0452B028BB70010866F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4964A04C2B028BB70010866F;
+			remoteInfo = HungryNow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4964A04D2B028BB70010866F /* HungryNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HungryNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4964A0502B028BB70010866F /* HungryNowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungryNowApp.swift; sourceTree = "<group>"; };
+		4964A0522B028BB70010866F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4964A0542B028BB70010866F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		4964A0562B028BB90010866F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4964A0582B028BB90010866F /* HungryNow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HungryNow.entitlements; sourceTree = "<group>"; };
+		4964A05A2B028BB90010866F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4964A0602B028BB90010866F /* HungryNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HungryNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4964A0642B028BB90010866F /* HungryNowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungryNowTests.swift; sourceTree = "<group>"; };
+		49E80BB72B02A59300A0F168 /* HungryNow.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = HungryNow.xctestplan; sourceTree = "<group>"; };
+		49E80BB82B03CD2E00A0F168 /* MealFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeedItem.swift; sourceTree = "<group>"; };
+		49E80BBA2B03CD9200A0F168 /* MealFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeedLoader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4964A04A2B028BB70010866F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4964A05D2B028BB90010866F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4964A0442B028BB70010866F = {
+			isa = PBXGroup;
+			children = (
+				49E80BB72B02A59300A0F168 /* HungryNow.xctestplan */,
+				4964A04F2B028BB70010866F /* HungryNow */,
+				4964A0632B028BB90010866F /* HungryNowTests */,
+				4964A04E2B028BB70010866F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4964A04E2B028BB70010866F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4964A04D2B028BB70010866F /* HungryNow.app */,
+				4964A0602B028BB90010866F /* HungryNowTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4964A04F2B028BB70010866F /* HungryNow */ = {
+			isa = PBXGroup;
+			children = (
+				4964A0502B028BB70010866F /* HungryNowApp.swift */,
+				4964A0522B028BB70010866F /* ContentView.swift */,
+				4964A0542B028BB70010866F /* Item.swift */,
+				4964A0562B028BB90010866F /* Assets.xcassets */,
+				4964A0582B028BB90010866F /* HungryNow.entitlements */,
+				4964A0592B028BB90010866F /* Preview Content */,
+				49E80BBD2B03CE7A00A0F168 /* MealFeedFeature */,
+			);
+			path = HungryNow;
+			sourceTree = "<group>";
+		};
+		4964A0592B028BB90010866F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4964A05A2B028BB90010866F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4964A0632B028BB90010866F /* HungryNowTests */ = {
+			isa = PBXGroup;
+			children = (
+				4964A0642B028BB90010866F /* HungryNowTests.swift */,
+			);
+			path = HungryNowTests;
+			sourceTree = "<group>";
+		};
+		49E80BBD2B03CE7A00A0F168 /* MealFeedFeature */ = {
+			isa = PBXGroup;
+			children = (
+				49E80BB82B03CD2E00A0F168 /* MealFeedItem.swift */,
+				49E80BBA2B03CD9200A0F168 /* MealFeedLoader.swift */,
+			);
+			path = MealFeedFeature;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4964A04C2B028BB70010866F /* HungryNow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4964A0742B028BB90010866F /* Build configuration list for PBXNativeTarget "HungryNow" */;
+			buildPhases = (
+				4964A0492B028BB70010866F /* Sources */,
+				4964A04A2B028BB70010866F /* Frameworks */,
+				4964A04B2B028BB70010866F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HungryNow;
+			productName = HungryNow;
+			productReference = 4964A04D2B028BB70010866F /* HungryNow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4964A05F2B028BB90010866F /* HungryNowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4964A0772B028BB90010866F /* Build configuration list for PBXNativeTarget "HungryNowTests" */;
+			buildPhases = (
+				4964A05C2B028BB90010866F /* Sources */,
+				4964A05D2B028BB90010866F /* Frameworks */,
+				4964A05E2B028BB90010866F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4964A0622B028BB90010866F /* PBXTargetDependency */,
+			);
+			name = HungryNowTests;
+			productName = HungryNowTests;
+			productReference = 4964A0602B028BB90010866F /* HungryNowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4964A0452B028BB70010866F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4964A04C2B028BB70010866F = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					4964A05F2B028BB90010866F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 4964A04C2B028BB70010866F;
+					};
+				};
+			};
+			buildConfigurationList = 4964A0482B028BB70010866F /* Build configuration list for PBXProject "HungryNow" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4964A0442B028BB70010866F;
+			productRefGroup = 4964A04E2B028BB70010866F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4964A04C2B028BB70010866F /* HungryNow */,
+				4964A05F2B028BB90010866F /* HungryNowTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4964A04B2B028BB70010866F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4964A05B2B028BB90010866F /* Preview Assets.xcassets in Resources */,
+				4964A0572B028BB90010866F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4964A05E2B028BB90010866F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4964A0492B028BB70010866F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4964A0532B028BB70010866F /* ContentView.swift in Sources */,
+				4964A0552B028BB70010866F /* Item.swift in Sources */,
+				4964A0512B028BB70010866F /* HungryNowApp.swift in Sources */,
+				49E80BB92B03CD2F00A0F168 /* MealFeedItem.swift in Sources */,
+				49E80BBB2B03CD9200A0F168 /* MealFeedLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4964A05C2B028BB90010866F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4964A0652B028BB90010866F /* HungryNowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4964A0622B028BB90010866F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4964A04C2B028BB70010866F /* HungryNow */;
+			targetProxy = 4964A0612B028BB90010866F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4964A0722B028BB90010866F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4964A0732B028BB90010866F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		4964A0752B028BB90010866F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HungryNow/HungryNow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HungryNow/Preview Content\"";
+				DEVELOPMENT_TEAM = 9QMWUGNK5F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Fetch.HungryNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4964A0762B028BB90010866F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HungryNow/HungryNow.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HungryNow/Preview Content\"";
+				DEVELOPMENT_TEAM = 9QMWUGNK5F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Fetch.HungryNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4964A0782B028BB90010866F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QMWUGNK5F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Fetch.HungryNowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HungryNow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HungryNow";
+			};
+			name = Debug;
+		};
+		4964A0792B028BB90010866F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9QMWUGNK5F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Fetch.HungryNowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HungryNow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HungryNow";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4964A0482B028BB70010866F /* Build configuration list for PBXProject "HungryNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4964A0722B028BB90010866F /* Debug */,
+				4964A0732B028BB90010866F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4964A0742B028BB90010866F /* Build configuration list for PBXNativeTarget "HungryNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4964A0752B028BB90010866F /* Debug */,
+				4964A0762B028BB90010866F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4964A0772B028BB90010866F /* Build configuration list for PBXNativeTarget "HungryNowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4964A0782B028BB90010866F /* Debug */,
+				4964A0792B028BB90010866F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4964A0452B028BB70010866F /* Project object */;
+}
