@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "582C0A74-1FA6-4CA8-9CCC-1FE29EF3A835",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:HungryNow.xcodeproj",
+      "identifier" : "4964A04C2B028BB70010866F",
+      "name" : "HungryNow"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:HungryNow.xcodeproj",
+        "identifier" : "4964A05F2B028BB90010866F",
+        "name" : "HungryNowTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:HungryNow.xcodeproj",
+        "identifier" : "4964A0692B028BB90010866F",
+        "name" : "HungryNowUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
