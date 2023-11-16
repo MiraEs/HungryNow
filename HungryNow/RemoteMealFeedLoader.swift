@@ -8,12 +8,16 @@
 import Foundation
 
 protocol HTTPClient {
-    func get(from url: URL)
+    func get(from url: URL, completion: @escaping (Error) -> Void)
 }
 
 class RemoteMealFeedLoader {
     let client: HTTPClient
     let url: URL
+    
+    public enum Error: Swift.Error {
+        case connectivity
+    }
     
     init(client: HTTPClient,
          url: URL = URL(string:"www.a-url.com")!) {
@@ -21,7 +25,9 @@ class RemoteMealFeedLoader {
         self.url = url
     }
     
-    func load() {
-        client.get(from: url)
+    func load(completion: @escaping (Error) -> Void = { _ in}) {
+        client.get(from: url, completion: { error in
+            completion(.connectivity)
+        })
     }
 }
