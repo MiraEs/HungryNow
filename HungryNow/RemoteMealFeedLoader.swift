@@ -40,9 +40,10 @@ class RemoteMealFeedLoader {
         client.get(from: url) { result in
             switch result {
             case let .success(data, response):
-                if response.statusCode == 200, let root = try? JSONDecoder().decode(Root.self, from: data) {
-                    completion(.success(root.meals.map { $0.meal }))
-                } else {
+                do {
+                    let items = try FeedItemsMapper.map(data, response)
+                    completion(.success(items))
+                } catch {
                     completion(.failure(.invalidData))
                 }
             case .failure:
@@ -52,17 +53,27 @@ class RemoteMealFeedLoader {
     }
 }
 
-private struct Root: Decodable {
-    let meals: [Meal]
-}
 
-// Create private struct to prevent exposing API knowledge (previously solved via coding keys)
-private struct Meal: Decodable {
-    var strMeal: String?
-    var strMealThumb: URL?
-    var idMeal: String?
+private class FeedItemsMapper {
+    struct Root: Decodable {
+        let meals: [Meal]
+    }
+
+    // Create private struct to prevent exposing API knowledge (previously solved via coding keys)
+    struct Meal: Decodable {
+        var strMeal: String?
+        var strMealThumb: URL?
+        var idMeal: String?
+        
+        var meal: MealFeedItem {
+            return MealFeedItem(name: strMeal, url: strMealThumb, id: idMeal)
+        }
+    }
     
-    var meal: MealFeedItem {
-        return MealFeedItem(name: strMeal, url: strMealThumb, id: idMeal)
+    static func map(_ data: Data, _ response: HTTPURLResponse) throws -> [MealFeedItem] {
+        guard response.statusCode == 200 else {
+            throw RemoteMealFeedLoader.Error.invalidData
+        }
+        return try JSONDecoder().decode(Root.self, from: data).meals.map { $0.meal }
     }
 }
