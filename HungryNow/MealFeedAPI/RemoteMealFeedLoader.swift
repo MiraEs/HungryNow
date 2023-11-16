@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RemoteMealFeedLoader {
+class RemoteMealFeedLoader: MealFeedLoader {
     let client: HTTPClient
     let url: URL
     
@@ -31,7 +31,7 @@ class RemoteMealFeedLoader {
             case let .success(data, response):
                 completion(RemoteFeedItemsMapper.map(data, from: response))
             case .failure:
-                completion(.failure(Error.connectivity))
+                completion(.failure(.connectivity))
             }
         }
     }

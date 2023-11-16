@@ -16,5 +16,5 @@ extension MealFeedLoadResult: Equatable where Error: Equatable {}
 
 protocol MealFeedLoader {
     associatedtype Error: Swift.Error
-    func load(complation: @escaping (MealFeedLoadResult<Error>) -> Void)
+    func load(completion: @escaping (MealFeedLoadResult<Error>) -> Void)
 }
