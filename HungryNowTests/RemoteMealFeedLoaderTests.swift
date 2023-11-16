@@ -61,7 +61,7 @@ final class RemoteMealFeedLoaderTests: XCTestCase {
         let (sut, client) = makeSUT()
 
         expect(sut, toCompleteWith: .success([])) {
-            let emptyListJSON = Data("{\"meals\": []}".utf8)
+            let emptyListJSON = makeItemsJSON([])
             client.complete(withStatusCode: 200, data: emptyListJSON)
         }
     }
@@ -80,13 +80,40 @@ final class RemoteMealFeedLoaderTests: XCTestCase {
         }
     }
     
+    // Make sure client does not complete closures if it is already deallocated
+    // `load` method vunerability in `RemoteMealFeedLoader` using static mapper method
+    func test_load_doesNotDeliverResultAfterSUTDeallocation() {
+        let url = URL(string: "www.any-url.com")!
+        let client = HTTPClientSpy()
+        var sut: RemoteMealFeedLoader? = RemoteMealFeedLoader(client: client, url: url)
+        
+        var capturedResults = [RemoteMealFeedLoader.Result]()
+        sut?.load { capturedResults.append($0) }
+        
+        sut = nil
+        client.complete(withStatusCode: 200, data: makeItemsJSON([]))
+        XCTAssertTrue(capturedResults.isEmpty)
+        
+    }
+    
     
     // MARK: - Helpers
     
-    private func makeSUT(url: URL = URL(string: "https://url.com")!) -> (sut: RemoteMealFeedLoader, client: HTTPClientSpy) {
+    private func makeSUT(url: URL = URL(string: "https://url.com")!,
+                         file: StaticString = #file,
+                         line: UInt = #line) -> (sut: RemoteMealFeedLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
         let sut = RemoteMealFeedLoader(client: client, url: url)
+        trackForMemoryLeaks(sut)
+        trackForMemoryLeaks(client)
         return (sut, client)
+    }
+    
+    private func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line) {
+        
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(instance, "Instance should be deallocated. Potential memory leak.", file: file, line: line)
+        }
     }
     
     private func makeItem(name: String? = nil, url: URL? = nil, id: String? = nil) -> (model: MealFeedItem, json: [String: Any]) {

@@ -7,15 +7,6 @@
 
 import Foundation
 
-enum HTTPClientResult {
-    case success(Data, HTTPURLResponse)
-    case failure(Error)
-}
-
-protocol HTTPClient {
-    func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void)
-}
-
 class RemoteMealFeedLoader {
     let client: HTTPClient
     let url: URL
@@ -37,43 +28,14 @@ class RemoteMealFeedLoader {
     }
     
     func load(completion: @escaping (Result) -> Void) {
-        client.get(from: url) { result in
+        client.get(from: url) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case let .success(data, response):
-                do {
-                    let items = try FeedItemsMapper.map(data, response)
-                    completion(.success(items))
-                } catch {
-                    completion(.failure(.invalidData))
-                }
+                completion(FeedItemsMapper.map(data, from: response))
             case .failure:
                 completion(.failure(.connectivity))
             }
         }
-    }
-}
-
-
-private class FeedItemsMapper {
-    struct Root: Decodable {
-        let meals: [Meal]
-    }
-
-    // Create private struct to prevent exposing API knowledge (previously solved via coding keys)
-    struct Meal: Decodable {
-        var strMeal: String?
-        var strMealThumb: URL?
-        var idMeal: String?
-        
-        var meal: MealFeedItem {
-            return MealFeedItem(name: strMeal, url: strMealThumb, id: idMeal)
-        }
-    }
-    
-    static func map(_ data: Data, _ response: HTTPURLResponse) throws -> [MealFeedItem] {
-        guard response.statusCode == 200 else {
-            throw RemoteMealFeedLoader.Error.invalidData
-        }
-        return try JSONDecoder().decode(Root.self, from: data).meals.map { $0.meal }
     }
 }
