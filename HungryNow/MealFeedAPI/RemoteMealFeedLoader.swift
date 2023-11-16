@@ -16,7 +16,7 @@ class RemoteMealFeedLoader: MealFeedLoader {
         case invalidData
     }
     
-    typealias Result = MealFeedLoadResult<Error>
+    typealias Result = MealFeedLoadResult
     
     init(client: HTTPClient,
          url: URL = URL(string:"www.a-url.com")!) {
@@ -31,7 +31,7 @@ class RemoteMealFeedLoader: MealFeedLoader {
             case let .success(data, response):
                 completion(RemoteFeedItemsMapper.map(data, from: response))
             case .failure:
-                completion(.failure(.connectivity))
+                completion(.failure(Error.connectivity))
             }
         }
     }
