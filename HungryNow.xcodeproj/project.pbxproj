@@ -97,9 +97,7 @@
 				4964A0582B028BB90010866F /* HungryNow.entitlements */,
 				4964A0592B028BB90010866F /* Preview Content */,
 				49E80BBD2B03CE7A00A0F168 /* MealFeedFeature */,
-				498B62922B05A881002104EE /* RemoteMealFeedLoader.swift */,
-				49C58D142B06894900D85F11 /* HTTPClient.swift */,
-				49C58D162B06897500D85F11 /* FeedItemsMapper.swift */,
+				49C58D182B06918700D85F11 /* MealFeedAPI */,
 			);
 			path = HungryNow;
 			sourceTree = "<group>";
@@ -119,6 +117,16 @@
 				49E80BC02B03CF8F00A0F168 /* RemoteMealFeedLoaderTests.swift */,
 			);
 			path = HungryNowTests;
+			sourceTree = "<group>";
+		};
+		49C58D182B06918700D85F11 /* MealFeedAPI */ = {
+			isa = PBXGroup;
+			children = (
+				498B62922B05A881002104EE /* RemoteMealFeedLoader.swift */,
+				49C58D142B06894900D85F11 /* HTTPClient.swift */,
+				49C58D162B06897500D85F11 /* FeedItemsMapper.swift */,
+			);
+			path = MealFeedAPI;
 			sourceTree = "<group>";
 		};
 		49E80BBD2B03CE7A00A0F168 /* MealFeedFeature */ = {

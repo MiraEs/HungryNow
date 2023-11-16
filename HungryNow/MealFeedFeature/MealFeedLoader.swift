@@ -7,11 +7,14 @@
 
 import Foundation
 
-enum MealFeedLoadResult {
+public enum MealFeedLoadResult<Error: Swift.Error> {
     case success([MealFeedItem])
     case failure(Error)
 }
 
+extension MealFeedLoadResult: Equatable where Error: Equatable {}
+
 protocol MealFeedLoader {
-    func load(complation: @escaping (MealFeedLoadResult) -> Void)
+    associatedtype Error: Swift.Error
+    func load(complation: @escaping (MealFeedLoadResult<Error>) -> Void)
 }

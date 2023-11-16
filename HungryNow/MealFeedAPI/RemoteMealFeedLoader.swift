@@ -16,10 +16,7 @@ class RemoteMealFeedLoader {
         case invalidData
     }
     
-    public enum Result: Equatable {
-        case success([MealFeedItem])
-        case failure(Error)
-    }
+    typealias Result = MealFeedLoadResult<Error>
     
     init(client: HTTPClient,
          url: URL = URL(string:"www.a-url.com")!) {
@@ -29,12 +26,12 @@ class RemoteMealFeedLoader {
     
     func load(completion: @escaping (Result) -> Void) {
         client.get(from: url) { [weak self] result in
-            guard let self = self else { return }
+            guard self != nil else { return }
             switch result {
             case let .success(data, response):
                 completion(FeedItemsMapper.map(data, from: response))
             case .failure:
-                completion(.failure(.connectivity))
+                completion(.failure(Error.connectivity))
             }
         }
     }

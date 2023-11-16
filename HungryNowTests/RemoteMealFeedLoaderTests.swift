@@ -80,6 +80,7 @@ final class RemoteMealFeedLoaderTests: XCTestCase {
         }
     }
     
+    // MEMORY LEAK CHECK
     // Make sure client does not complete closures if it is already deallocated
     // `load` method vunerability in `RemoteMealFeedLoader` using static mapper method
     func test_load_doesNotDeliverResultAfterSUTDeallocation() {
@@ -120,6 +121,7 @@ final class RemoteMealFeedLoaderTests: XCTestCase {
         
         let item = MealFeedItem(name: name, url: url, id: id)
         
+        
         let json = [
             "strMeal": name,
             "strMealThumb": url?.absoluteString,
@@ -132,8 +134,6 @@ final class RemoteMealFeedLoaderTests: XCTestCase {
     private func makeItemsJSON(_ items: [[String: Any]]) -> Data {
         let itemsJSON = ["meals": items]
         return try! JSONSerialization.data(withJSONObject: itemsJSON)
-        
-        
     }
     
     private func expect(_ sut: RemoteMealFeedLoader, toCompleteWith result: RemoteMealFeedLoader.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
@@ -174,7 +174,5 @@ final class RemoteMealFeedLoaderTests: XCTestCase {
             
             messages[index].completion(.success(data, response))
         }
-        
-        
     }
 }

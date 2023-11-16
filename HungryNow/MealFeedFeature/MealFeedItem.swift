@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MealFeedItem: Equatable {
+public struct MealFeedItem: Equatable {
     var name: String?
     var url: URL?
     var id: String?
