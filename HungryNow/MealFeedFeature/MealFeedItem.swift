@@ -19,11 +19,3 @@ struct MealFeedItem: Equatable {
     }
 }
 
-extension MealFeedItem: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case name = "strMeal"
-        case url = "strMealThumb"
-        case id = "idMeal"
-    }
-}
-

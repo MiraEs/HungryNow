@@ -39,9 +39,9 @@ class RemoteMealFeedLoader {
     func load(completion: @escaping (Result) -> Void) {
         client.get(from: url) { result in
             switch result {
-            case let .success(data, _):
-                if let root = try? JSONDecoder().decode(Root.self, from: data) {
-                    completion(.success(root.meals))
+            case let .success(data, response):
+                if response.statusCode == 200, let root = try? JSONDecoder().decode(Root.self, from: data) {
+                    completion(.success(root.meals.map { $0.meal }))
                 } else {
                     completion(.failure(.invalidData))
                 }
@@ -53,5 +53,16 @@ class RemoteMealFeedLoader {
 }
 
 private struct Root: Decodable {
-    let meals: [MealFeedItem]
+    let meals: [Meal]
+}
+
+// Create private struct to prevent exposing API knowledge (previously solved via coding keys)
+private struct Meal: Decodable {
+    var strMeal: String?
+    var strMealThumb: URL?
+    var idMeal: String?
+    
+    var meal: MealFeedItem {
+        return MealFeedItem(name: strMeal, url: strMealThumb, id: idMeal)
+    }
 }
