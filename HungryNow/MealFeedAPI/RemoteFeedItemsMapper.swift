@@ -1,5 +1,5 @@
 //
-//  FeedItemsMapper.swift
+//  RemoteFeedItemsMapper.swift
 //  HungryNow
 //
 //  Created by Mir on 11/16/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FeedItemsMapper {
+final class RemoteFeedItemsMapper {
     private struct Root: Decodable {
         let meals: [Meal]
         
