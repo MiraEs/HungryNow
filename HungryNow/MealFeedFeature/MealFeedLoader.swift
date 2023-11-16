@@ -12,7 +12,7 @@ public enum MealFeedLoadResult {
     case failure(Error)
 }
 
-protocol MealFeedLoader {
+public protocol MealFeedLoader {
     associatedtype Error: Swift.Error
     func load(completion: @escaping (MealFeedLoadResult) -> Void)
 }
