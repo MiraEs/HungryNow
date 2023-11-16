@@ -13,8 +13,10 @@
 		4964A0572B028BB90010866F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4964A0562B028BB90010866F /* Assets.xcassets */; };
 		4964A05B2B028BB90010866F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4964A05A2B028BB90010866F /* Preview Assets.xcassets */; };
 		4964A0652B028BB90010866F /* HungryNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964A0642B028BB90010866F /* HungryNowTests.swift */; };
+		498B62932B05A881002104EE /* RemoteMealFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498B62922B05A881002104EE /* RemoteMealFeedLoader.swift */; };
 		49E80BB92B03CD2F00A0F168 /* MealFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E80BB82B03CD2E00A0F168 /* MealFeedItem.swift */; };
 		49E80BBB2B03CD9200A0F168 /* MealFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E80BBA2B03CD9200A0F168 /* MealFeedLoader.swift */; };
+		49E80BC12B03CF8F00A0F168 /* RemoteMealFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E80BC02B03CF8F00A0F168 /* RemoteMealFeedLoaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,11 @@
 		4964A05A2B028BB90010866F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4964A0602B028BB90010866F /* HungryNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HungryNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4964A0642B028BB90010866F /* HungryNowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungryNowTests.swift; sourceTree = "<group>"; };
+		498B62922B05A881002104EE /* RemoteMealFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMealFeedLoader.swift; sourceTree = "<group>"; };
 		49E80BB72B02A59300A0F168 /* HungryNow.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = HungryNow.xctestplan; sourceTree = "<group>"; };
 		49E80BB82B03CD2E00A0F168 /* MealFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeedItem.swift; sourceTree = "<group>"; };
 		49E80BBA2B03CD9200A0F168 /* MealFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFeedLoader.swift; sourceTree = "<group>"; };
+		49E80BC02B03CF8F00A0F168 /* RemoteMealFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMealFeedLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				4964A0582B028BB90010866F /* HungryNow.entitlements */,
 				4964A0592B028BB90010866F /* Preview Content */,
 				49E80BBD2B03CE7A00A0F168 /* MealFeedFeature */,
+				498B62922B05A881002104EE /* RemoteMealFeedLoader.swift */,
 			);
 			path = HungryNow;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				4964A0642B028BB90010866F /* HungryNowTests.swift */,
+				49E80BC02B03CF8F00A0F168 /* RemoteMealFeedLoaderTests.swift */,
 			);
 			path = HungryNowTests;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 				4964A0512B028BB70010866F /* HungryNowApp.swift in Sources */,
 				49E80BB92B03CD2F00A0F168 /* MealFeedItem.swift in Sources */,
 				49E80BBB2B03CD9200A0F168 /* MealFeedLoader.swift in Sources */,
+				498B62932B05A881002104EE /* RemoteMealFeedLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4964A0652B028BB90010866F /* HungryNowTests.swift in Sources */,
+				49E80BC12B03CF8F00A0F168 /* RemoteMealFeedLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

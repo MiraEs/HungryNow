@@ -17,7 +17,6 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:HungryNow.xcodeproj",
         "identifier" : "4964A05F2B028BB90010866F",
@@ -25,6 +24,7 @@
       }
     },
     {
+      "enabled" : false,
       "parallelizable" : true,
       "target" : {
         "containerPath" : "container:HungryNow.xcodeproj",
