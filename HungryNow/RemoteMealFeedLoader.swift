@@ -7,8 +7,13 @@
 
 import Foundation
 
+enum HTTPClientResult {
+    case success(Data, HTTPURLResponse)
+    case failure(Error)
+}
+
 protocol HTTPClient {
-    func get(from url: URL, completion: @escaping (Error) -> Void)
+    func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void)
 }
 
 class RemoteMealFeedLoader {
@@ -17,6 +22,12 @@ class RemoteMealFeedLoader {
     
     public enum Error: Swift.Error {
         case connectivity
+        case invalidData
+    }
+    
+    public enum Result: Equatable {
+        case success([MealFeedItem])
+        case failure(Error)
     }
     
     init(client: HTTPClient,
@@ -25,9 +36,22 @@ class RemoteMealFeedLoader {
         self.url = url
     }
     
-    func load(completion: @escaping (Error) -> Void = { _ in}) {
-        client.get(from: url, completion: { error in
-            completion(.connectivity)
-        })
+    func load(completion: @escaping (Result) -> Void) {
+        client.get(from: url) { result in
+            switch result {
+            case let .success(data, _):
+                if let root = try? JSONDecoder().decode(Root.self, from: data) {
+                    completion(.success(root.meals))
+                } else {
+                    completion(.failure(.invalidData))
+                }
+            case .failure:
+                completion(.failure(.connectivity))
+            }
+        }
     }
+}
+
+private struct Root: Decodable {
+    let meals: [MealFeedItem]
 }
