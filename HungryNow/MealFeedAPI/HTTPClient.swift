@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HTTPClientResult {
+public enum HTTPClientResult {
     case success(Data, HTTPURLResponse)
     case failure(Error)
 }
