@@ -67,7 +67,6 @@ class URLSessionHTTPClientTests: XCTestCase {
     
     func test_getFromURL_succeedsWithEmptyDataOnHTTPURLResponseWithNilData() {
         let response = anyHTTPURLResponse()
-        
         let receivedValues = resultValuesFor(data: nil, response: response, error: nil)
 
         let emptyData = Data()

@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "74DA24AC-D4D2-4FB7-A6EE-5AD4FF5BCE86",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:HungryNow.xcodeproj",
+        "identifier" : "49C9CB192B30BDCF00BE23CC",
+        "name" : "HungryNowAPIEndToEndTests"
+      }
+    }
+  ],
+  "version" : 1
+}
