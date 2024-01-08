@@ -34,6 +34,7 @@ final class HungryNowAPIEndToEndTests: XCTestCase {
         let client = URLSessionHTTPClient()
         let loader = RemoteMealFeedLoader(client: client, url: testServerURL)
         trackForMemoryLeaks(client, file: file, line: line)
+        trackForMemoryLeaks(loader, file: file, line: line)
         let exp = expectation(description: "Wait for load completion")
         
         var receivedResult: MealFeedLoadResult?
