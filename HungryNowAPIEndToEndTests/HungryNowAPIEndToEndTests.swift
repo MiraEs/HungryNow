@@ -11,22 +11,7 @@ import XCTest
 final class HungryNowAPIEndToEndTests: XCTestCase {
 
     func test_endToEndTestServerGETFeedResult_matchesFixedTestAccountData() {
-        let testServerURL = URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?c=breakfast")!
-                                    //"https://www.themealdb.com/api/json/v1/1/filter.php?c=dessert")!
-                                    //"http://www.themealdb.com/api/json/v1/1/list.php?c=list")! //"https://www.themealdb.com/api/json/v1/1/categories.php")!
-        let client = URLSessionHTTPClient()
-        let loader = RemoteMealFeedLoader(client: client, url: testServerURL)
-        
-        let exp = expectation(description: "Wait for load completion")
-        
-        var receivedResult: MealFeedLoadResult?
-        loader.load { result in
-            receivedResult = result
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 5.0)
-        
-        switch receivedResult {
+        switch getFeedResult() {
         case let .success(items)?:
             XCTAssertEqual(items.count, 8, "Expected 8 items in the test account feed")
             
@@ -42,6 +27,25 @@ final class HungryNowAPIEndToEndTests: XCTestCase {
     }
     
     // MARK: - Helpers
+    private func getFeedResult() -> MealFeedLoadResult? {
+        let testServerURL = URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?c=breakfast")!
+                                    //"https://www.themealdb.com/api/json/v1/1/filter.php?c=dessert")!
+                                    //"http://www.themealdb.com/api/json/v1/1/list.php?c=list")! //"https://www.themealdb.com/api/json/v1/1/categories.php")!
+        let client = URLSessionHTTPClient()
+        let loader = RemoteMealFeedLoader(client: client, url: testServerURL)
+        
+        let exp = expectation(description: "Wait for load completion")
+        
+        var receivedResult: MealFeedLoadResult?
+        loader.load { result in
+            receivedResult = result
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 5.0)
+        
+        return receivedResult
+    }
+    
     private func expectedItem(at index: Int) -> MealFeedItem {
         return MealFeedItem(name: name(at: index), url: url(at: index), id: id(at: index))
     }
