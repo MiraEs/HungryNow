@@ -27,13 +27,13 @@ final class HungryNowAPIEndToEndTests: XCTestCase {
     }
     
     // MARK: - Helpers
-    private func getFeedResult() -> MealFeedLoadResult? {
+    private func getFeedResult(file: StaticString = #file, line: UInt = #line) -> MealFeedLoadResult? {
         let testServerURL = URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?c=breakfast")!
                                     //"https://www.themealdb.com/api/json/v1/1/filter.php?c=dessert")!
                                     //"http://www.themealdb.com/api/json/v1/1/list.php?c=list")! //"https://www.themealdb.com/api/json/v1/1/categories.php")!
         let client = URLSessionHTTPClient()
         let loader = RemoteMealFeedLoader(client: client, url: testServerURL)
-        
+        trackForMemoryLeaks(client, file: file, line: line)
         let exp = expectation(description: "Wait for load completion")
         
         var receivedResult: MealFeedLoadResult?
