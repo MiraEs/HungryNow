@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4918EDCD2B4DE2C500EE2590 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
 		4964A04D2B028BB70010866F /* HungryNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HungryNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4964A0502B028BB70010866F /* HungryNowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungryNowApp.swift; sourceTree = "<group>"; };
 		4964A0522B028BB70010866F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		4964A0602B028BB90010866F /* HungryNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HungryNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4964A0642B028BB90010866F /* HungryNowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungryNowTests.swift; sourceTree = "<group>"; };
 		49683F9C2B16990E005F1F2B /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
-		4986DA162B4C87F80054F753 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
 		498B62922B05A881002104EE /* RemoteMealFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteMealFeedLoader.swift; sourceTree = "<group>"; };
 		49C58D142B06894900D85F11 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		49C58D162B06897500D85F11 /* RemoteFeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItemsMapper.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		4964A0442B028BB70010866F = {
 			isa = PBXGroup;
 			children = (
-				4986DA162B4C87F80054F753 /* CI.xctestplan */,
+				4918EDCD2B4DE2C500EE2590 /* CI.xctestplan */,
 				49DD081A2B335E2F000FB38F /* HungryNowAPIEndToEndTests.xctestplan */,
 				49E80BB72B02A59300A0F168 /* HungryNow.xctestplan */,
 				4964A04F2B028BB70010866F /* HungryNow */,
