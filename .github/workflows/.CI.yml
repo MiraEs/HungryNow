@@ -19,6 +19,5 @@ jobs:
     - name: Select xcode 
       run: sudo xcode-select -switch /Applications/Xcode.app
     - name: Run tests
-      run: xcodebuild clean test -project "HungryNow.xcodeproj" -scheme "CI" -destination "platform=iOS Simulator,name=iPhone 13 Pro,OS=latest"
-    - name: Build App
-      run: xcodebuild -project "HungryNow.xcodeproj" -scheme "CI" -destination "generic/platform=iOS" -configuration Release build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO 
+      run: xcodebuild clean test -project "HungryNow.xcodeproj" -scheme "CI" -destination "platform=iOS Simulator,name=iPhone 14 Pro,OS=latest"
+ 
