@@ -20,6 +20,5 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode15.1.app
     - name: Build and run tests
       run: 
-        device=`xcrun xctrace list devices 2>&1 | grep -oE 'iPhone.*?[^\(]+' | head -1 | awk '{$1=$1;print}'`
-        xcodebuild clean build test -project "HungryNow.xcodeproj" -scheme "CI" -destination "platform=iOS Simulator,name=Any iOS Simulator Device,OS=latest" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+        xcodebuild clean build test -project "HungryNow.xcodeproj" -scheme "HungryNowTests" -destination "platform:iOS Simulator, OS:17.0, name:iPhone 13 Pro" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
  
