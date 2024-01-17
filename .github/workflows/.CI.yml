@@ -15,7 +15,7 @@ jobs:
     runs-on: macos-13
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Select xcode
       run: sudo xcode-select -switch /Applications/Xcode_15.0.1.app
     - name: Build and run tests
