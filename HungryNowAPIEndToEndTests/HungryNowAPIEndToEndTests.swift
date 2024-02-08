@@ -31,7 +31,7 @@ final class HungryNowAPIEndToEndTests: XCTestCase {
         let testServerURL = URL(string: "https://www.themealdb.com/api/json/v1/1/filter.php?c=breakfast")!
                                     //"https://www.themealdb.com/api/json/v1/1/filter.php?c=dessert")!
                                     //"http://www.themealdb.com/api/json/v1/1/list.php?c=list")! //"https://www.themealdb.com/api/json/v1/1/categories.php")!
-        let client = URLSessionHTTPClient()
+        let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))//URLSessionHTTPClient()
         let loader = RemoteMealFeedLoader(client: client, url: testServerURL)
         trackForMemoryLeaks(client, file: file, line: line)
         trackForMemoryLeaks(loader, file: file, line: line)
