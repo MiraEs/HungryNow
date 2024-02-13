@@ -27,7 +27,8 @@ public final class LocalMealFeedLoader {
     }
     
     private func cache(_ items: [MealFeedItem], with completion: @escaping (Error?) -> Void) {
-        store.insert(items, timestamp: self.currentDate()) { error in
+        store.insert(items, timestamp: self.currentDate()) { [weak self] error in
+            guard self != nil else { return }
             completion(error)
         }
     }
