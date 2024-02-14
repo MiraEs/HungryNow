@@ -28,7 +28,6 @@ class CacheFeedUseCaseTests: XCTestCase {
         XCTAssertEqual(store.receivedMessages, [.deletedCachedFeed])
     }
     
-    
     func test_save_requestsNewCacheInsertionWithTimestampOnSuccessfulDeletion() {
         let timestamp = Date()
         let items = [uniqueItem(), uniqueItem()]
@@ -72,7 +71,7 @@ class CacheFeedUseCaseTests: XCTestCase {
         let store = FeedStoreSpy()
         var sut: LocalMealFeedLoader? = LocalMealFeedLoader(store: store, currentDate: Date.init)
         
-        var receivedResults = [Error?]()
+        var receivedResults = [LocalMealFeedLoader.SaveResult]()
         sut?.save([uniqueItem()]) { receivedResults.append($0) }
         
         sut = nil
@@ -85,7 +84,7 @@ class CacheFeedUseCaseTests: XCTestCase {
         let store = FeedStoreSpy()
         var sut: LocalMealFeedLoader? = LocalMealFeedLoader(store: store, currentDate: Date.init)
         
-        var receivedResults = [Error?]()
+        var receivedResults = [LocalMealFeedLoader.SaveResult]()
         sut?.save([uniqueItem()]) { receivedResults.append($0) }
         
         store.completeDeletionSuccessfully()
