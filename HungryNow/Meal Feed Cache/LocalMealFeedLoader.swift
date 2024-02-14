@@ -28,6 +28,10 @@ public final class LocalMealFeedLoader {
         }
     }
     
+    public func load() {
+        store.retrieve()
+    }
+    
     private func cache(_ items: [MealFeedItem], with completion: @escaping (SaveResult) -> Void) {
         store.insert(items, timestamp: self.currentDate()) { [weak self] error in
             guard self != nil else { return }
